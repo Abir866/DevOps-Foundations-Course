@@ -49,10 +49,11 @@ jobs:
        python-version: '3.9'
       # Install dependencies
     - name: Install python dependencies
-      run : pip install -r requirement.txt
-      
+      run : pip install -r requirements.txt
+      working-directory: ./Project/backend/
       # Run tests
     - name: Test backend
       run: pytest
+      working-directory: ./Project/backend/
 
   # TODO: Define a job for building and pushing Docker images
