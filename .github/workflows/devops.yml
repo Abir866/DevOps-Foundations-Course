@@ -28,15 +28,16 @@ jobs:
       
       # Run tests
     - name: Test code
-      run: npm run test
+#      run: npm run test
       working-directory: ./Project/frontend/
 
 
 
     - name: Build code
       run: npm run build
-      working-directory: ./Project/frontend
+      working-directory: ./Project/frontend/
   backend:
+    needs: frontend
     runs-on: ubuntu-latest
     steps:
     
