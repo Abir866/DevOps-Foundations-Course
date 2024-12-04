@@ -24,11 +24,27 @@ jobs:
       # TODO: Setup Node.js
       # TODO: Install dependencies
       # Run tests
-    # - name: Test code
-   # run: node Project/frontend/src/App.test.js
+    - name: Test code
+      run: npm run test
    # - name: Test Setup
    #   run: node Project/frontend/src/setupTests.js
       # TODO: Build the React app
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+    
+    
+      # Checkout code
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      # Setup Python
+    - name: Setup Python
+      uses: actions/setup-node@v2
+      with:
+       python-version: '3.9'
+      
+      # Run tests
+    - name: Test backend
+      run: pytest
 
-
-      # TODO: Add deployment steps
+  # TODO: Define a job for building and pushing Docker images
