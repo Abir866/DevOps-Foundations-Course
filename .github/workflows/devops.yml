@@ -1,0 +1,58 @@
+# TODO: Define the Workflow Name
+name: devops-workflow
+
+# TODO: Define triggers for the workflow
+on:
+   push:
+     branches: master 
+   pull_request:
+     branches: master
+
+jobs:
+  # TODO: Define a job for building and testing the frontend
+  frontend:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+      # TODO: Checkout code
+      # TODO: Setup Node.js
+      # TODO: Install dependencies
+      # TODO: Run tests
+      # TODO: Build the React app
+
+  # TODO: Define a job for building and testing the backend
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      # TODO: Checkout code
+      # TODO: Setup Python
+      # TODO: Install dependencies
+      # TODO: Run tests
+
+  # TODO: Define a job for building and pushing Docker images
+  docker:
+    # Run this job only when 'frontend' & 'backend' stages are sucessfully completed
+    needs: 
+    runs-on: ubuntu-latest
+    steps:
+      # TODO: Checkout code
+      # TODO: Setup Docker
+      # TODO: Build frontend Docker image
+      # TODO: Build backend Docker image
+      # TODO: Push images to Docker Hub (if on main branch)
+
+  # OPTIONAL: Define a deployment job (if applicable)
+  deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+      # TODO: Add deployment steps
