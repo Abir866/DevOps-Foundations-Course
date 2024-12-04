@@ -25,14 +25,17 @@ jobs:
       # TODO: Install dependencies
     - name: Install dependencies
       run: npm install
+      
       # Run tests
     - name: Test code
       run: npm run test
+      working-directory: ./frontend
 
 
 
     - name: Build code
       run: npm run build
+      working-directory: ./frontend
   backend:
     runs-on: ubuntu-latest
     steps:
