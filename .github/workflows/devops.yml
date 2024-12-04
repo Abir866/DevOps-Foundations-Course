@@ -25,9 +25,9 @@ jobs:
       # TODO: Install dependencies
       # Run tests
     - name: Test code
-      run: node App.test.js
+      run: node Project/frontend/src/App.test.js
     - name: Test Setup
-      run: node setupTests.js
+      run: node Project/frontend/src/setupTests.js
       # TODO: Build the React app
 
 
