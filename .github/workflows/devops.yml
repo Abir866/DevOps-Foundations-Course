@@ -19,16 +19,22 @@ jobs:
     - name: Set up Node
       uses: actions/setup-node@v2
       with:
+      # Setup Node.js
         node-version: '14'
-      # TODO: Checkout code
-      # TODO: Setup Node.js
+
       # TODO: Install dependencies
+    - name: Install dependencies
+      run: npm install
       # Run tests
     - name: Test code
       run: npm run test
-   # - name: Test Setup
-   #   run: node Project/frontend/src/setupTests.js
+
       # TODO: Build the React app
+    - name: Build code
+    - run: npm run build
+
+    - name: Test code
+      run: npm run test
   backend:
     runs-on: ubuntu-latest
     steps:
@@ -42,6 +48,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
        python-version: '3.9'
+      # Install dependencies
+    - name: Install python dependencies
+      run : pip install -r requirement.txt
       
       # Run tests
     - name: Test backend
