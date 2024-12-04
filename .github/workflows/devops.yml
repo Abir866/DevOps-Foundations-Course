@@ -29,12 +29,10 @@ jobs:
     - name: Test code
       run: npm run test
 
-      # TODO: Build the React app
-    - name: Build code
-    - run: npm run build
 
-    - name: Test code
-      run: npm run test
+
+    - name: Build code
+      run: npm run build
   backend:
     runs-on: ubuntu-latest
     steps:
