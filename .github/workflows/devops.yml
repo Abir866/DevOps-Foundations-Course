@@ -71,10 +71,10 @@ jobs:
     
           - name: Build and push frontend Docker image
             run: |
-              docker build -t ${{ secrets.DOCKER_USER_NAME }}/dolon-codes-frontend:latest ./Project/frontend/
+              docker build -t ${{ secrets.DOCKER_USER_NAME }}/dolon-codes:frontend:latest ./Project/frontend/
               docker push ${{ secrets.DOCKER_USER_NAME }}/dolon-codes:frontend-latest
     
           - name: Build and push backend Docker image
             run: |
-              docker build -t ${{ secrets.DOCKER_USER_NAME }}/dolon-codes-backend-latest ./Project/backend/
+              docker build -t ${{ secrets.DOCKER_USER_NAME }}/dolon-codes:backend-latest ./Project/backend/
               docker push ${{ secrets.DOCKER_USER_NAME }}/dolon-codes:backend-latest
