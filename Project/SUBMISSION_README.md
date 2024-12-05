@@ -93,7 +93,7 @@
 
 - List any assumptions you made while creating the Dockerfiles, `docker-compose.yml`, or CI/CD pipeline. 
 
-<!-- Locally the docker-compose file worked I did not use it in the Github workflow though -->
+<!-- Locally the docker-compose file worked I did not use it in the Github workflow -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
