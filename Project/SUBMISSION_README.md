@@ -64,7 +64,7 @@
 **Use this section to explain how your services interact and are configured within `docker-compose.yml`.**
 
 <!-- Forntend  and Backend service. They are containerized applications -->
-<!-- via host network -->
+<!-- via bridge network -->
 <!-- No-->
 <!-- No -->
 
@@ -93,7 +93,7 @@
 
 - List any assumptions you made while creating the Dockerfiles, `docker-compose.yml`, or CI/CD pipeline. 
 
-<!-- Include explanation here -->
+<!-- Locally the docker-compose file worked I did not use it in the Github workflow though -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
