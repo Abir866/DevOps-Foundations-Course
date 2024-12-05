@@ -2,32 +2,30 @@
 
 #### Complete Project Instructions: [DevOps Foundations Course/Project](https://github.com/shiftkey-labs/DevOps-Foundations-Course/tree/master/Project)
 
-#### Submission by - **<FIRST_NAME> <LAST_NAME>**
+#### Submission by - **Toufiq Abir Farhan Tufan **
 
 ### Project Overview
 
 - **Brief project description:** What is the purpose of your application?
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
+<!-- To test workflow -->
+<!-- To utilize microservices to perform calculations-->
 <!-- Include explanation here -->
 <!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
 
 
 - **Which files are you implmenting? and why?:**
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
+<!-- devops.yml - to create a workflow for automating CI/CD -->
+<!-- Docker to create images for containers-->
+
+
 
 
 - _**Any other explanations for personal note taking.**_
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
+<!--None-->
+
 
 
 ### Docker Implementation
@@ -38,18 +36,18 @@
     - Here please explain the `Dockerfile` created for the Python Backend API. 
     - This can be a simple explanation which serves as a reference guide, or revision to you when read back the readme in future. 
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
+<!-- Starts it a base image of python runtime -->
+<!-- Adds required dependencies to run the code files in a created working dictorectory-->
+<!--  gather all the code to run in that directory before running app.py and exposing the container port 5000 ready to be mapped -->
+
 
 - **Frontend Dockerfile** (React App):
     - Similar to the above section, please explain the Dockerfile created for the React Frontend Web Application. 
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
+<!-- Start with installing avalable image of javascript run-time environment -->
+<!-- Installs dependecies to the image for excuting commands that run the front code starting from building to testing. -->
+<!-- Everythings gathered to working directory before the code files are used to buld and test-->
+
 
 **Use this section to document your choices and steps for building the Docker images.**
 
@@ -65,11 +63,11 @@
 
 **Use this section to explain how your services interact and are configured within `docker-compose.yml`.**
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
+<!-- Forntend  and Backend service. They are containerized applications -->
+<!-- via host network -->
+<!-- No-->
+<!-- No -->
+
 
 
 ### CI/CD Pipeline (YAML Configuration)
@@ -82,28 +80,13 @@
 
 **Use this section to document your automated build and deployment process.**
 
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
+<!-- Github pull and push from and to master branch-->
+<!-- build , test , docker -->
+<!-- images are built by running the docker files  in the Github runner via docker install and then pushed to the dockerhub via envronment variables saved in github that contains user name and password to the docker hub account which is available in the runner and can be access in the workflow -->
+
 <!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
 
 
-### CI/CD Pipeline (YAML Configuration)
-
-**Simply explain your CI/CD pipeline:**
-
-- What triggers the pipeline (e.g., push to main branch)?
-- What are the different stages (build, test, deploy)?
-- How are Docker images built and pushed to a registry?
-
-**Use this section to document your automated build, and docker process.**
-
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- Include explanation here -->
-<!-- NOTE: It is not compulsory to include detailed explanations, writing succint concise points would also sufice. Make sure maintain readability and clarity. -->
 
 
 ### Assumptions
@@ -124,7 +107,7 @@
 
 **Use this section to reflect on your experience and learnings when implementing this project.**
 
-<!-- Include explanation here -->
+<!-- Learned more in the project and I came to know I need to learn during the exam-->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
@@ -138,7 +121,7 @@
 
 **Use this section to brainstorm ways to enhance your project.**
 
-<!-- Include explanation here -->
+<!-- I will make it a Quantum Calculator -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->
 <!-- Include explanation here -->

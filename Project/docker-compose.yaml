@@ -13,16 +13,6 @@ services:
     depends_on: 
     - backend
 
-    # Additional options (uncomment and configure as needed):
-    
-    # Specify environment variables if needed
-    # environment:
-    
-    # Specify volume for live code reloading (optional)
-    # volumes:
-    
-    # Specify the command to run the development server (if different from Dockerfile)
-    # command:
 
   backend:
     # Specify the build context for the backend
@@ -30,20 +20,4 @@ services:
     # Map the host port to the container port
     ports:
     - "5000:5000"
-    # Additional options (uncomment and configure as needed):
-    
-    # Specify environment variables if needed
-    # environment:
-    
-    # Specify volume for live code reloading (optional)
-    # volumes:
-    
-    # Specify the command to run the development server (if different from Dockerfile)
-    # command:
 
-# Additional components (uncomment and configure as needed):
-# Define a custom network (if applicable)
-# networks:
-
-# Define volumes (if applicable)
-# volumes:
